@@ -1,0 +1,14 @@
+#required::placeholder{
+    color: red;
+}#required1::placeholder{
+    color: red;
+}
+#required2::placeholder{
+    color: red;
+}
+
+body{
+    background-image: url('../assets/Tanas.jpg');
+    background-repeat: no-repeat;
+   background-size: 100em;
+   }

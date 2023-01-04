@@ -1,0 +1,16 @@
+  .image-text{
+    margin-left: 100px;
+
+  }
+  .image-text2{
+    margin-left: 100px;
+  }
+
+  body{
+    background-image: url('../assets/Tanas.jpg');
+    background-repeat: no-repeat;
+   background-size: 100em;
+   }
+/* .laith{
+  background-color: rgba(0, 0, 0,0.5)!important;
+} */
