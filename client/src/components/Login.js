@@ -28,7 +28,7 @@ const Login = () => {
         console.log('----',res);
         localStorage.setItem('user', JSON.stringify(res.data.user));
         if (res.data.msg == "tanas") {
-          navigate("/");
+          navigate("/polls");
         } else {
           setErrormsg(res.data.msg);
         }

@@ -2,20 +2,17 @@ import { Button } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Modal, Radio, message } from 'antd';
+import { Modal, message } from 'antd';
 import NavBar from './NavBar'
 import io from 'socket.io-client';
-import Waad from './Footer';
 
 const Poll = () => {
     const [poll,setPoll]=useState({})
-    const [x,setX]=useState(0)
     const [socket] = useState(() => io(':8000'));
     const navigate=useNavigate()
     const {id} = useParams()
     const [loggedInUser, setLoggedInUser] = useState(null);
     const [visible, setVisible] = useState(false);
-    // const [visible1, setVisible1] = useState(false);
 
 
  
@@ -54,8 +51,8 @@ const Poll = () => {
 
 const updateVote= (tanas) =>{
   axios.put("http://localhost:8000/api/polls/"+id,{votes1:tanas+1})
-  setVisible(true)
-    socket.emit("client",poll.votes1)
+    setVisible(true)
+   .then(e=>(socket.emit("client",poll.votes1)))
     
 }
 
@@ -63,7 +60,6 @@ const updateVote2 = (tanas) =>{
     axios.put("http://localhost:8000/api/polls/"+id,{votes2:tanas+1})
     setVisible(true)
     socket.emit("client",poll.votes2)
-    
     }
 
 
@@ -77,6 +73,33 @@ const updateVote4 = (tanas) =>{
   axios.put("http://localhost:8000/api/polls/"+id,{votes4:tanas+1})
   socket.emit("client",poll.votes4)
   setVisible(true);
+    }
+
+    const unvote= (tanas) =>{
+      axios.put("http://localhost:8000/api/polls/"+id,{votes1:tanas-1})
+      setVisible(true)
+        socket.emit("client",poll.votes1)
+        
+    }
+
+    const unvote2= (tanas) =>{
+      axios.put("http://localhost:8000/api/polls/"+id,{votes2:tanas-1})
+      setVisible(true)
+        socket.emit("client",poll.votes1)
+        
+    }
+    const unvote3= (tanas) =>{
+      axios.put("http://localhost:8000/api/polls/"+id,{votes3:tanas-1})
+      setVisible(true)
+        socket.emit("client",poll.votes1)
+        
+    }
+
+    const unvote4= (tanas) =>{
+      axios.put("http://localhost:8000/api/polls/"+id,{votes4:tanas-1})
+      setVisible(true)
+        socket.emit("client",poll.votes1)
+        
     }
 
   return (

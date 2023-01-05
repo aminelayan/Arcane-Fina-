@@ -39,7 +39,7 @@ const CreateUser = () => {
         if (res.data.errors) {
           setErrors(res.data.errors);
         } else {
-          navigate("/dashboard");
+          navigate("/polls");
         }
       })
       .catch((err) => console.log(err));

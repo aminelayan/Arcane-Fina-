@@ -46,7 +46,7 @@ const QuestionForm = (props) => {
         console.log("res",res)
           setQuestions([...questions,res.data]);
           console.log(questions)
-          navigate('/')
+          navigate('/polls')
       })
       .catch(err=>{
           const errorResponse = err.response.data.errors; 

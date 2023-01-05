@@ -69,20 +69,13 @@ const NavBar = (props) => {
             <span style={{color:"black", marginLeft:"40px",fontFamily:"Arial",fontSize:"1.1rem"}}>Welcome, {(JSON.parse(localStorage.getItem('user')).firstName)} </span>:""}
           </Typography>
           { (localStorage.getItem('user'))!= null?
-          <div style={{backgroundColor:"white",width:"300px"}}>
-          <Link to="/valid" style={{color:"black", marginRight:"50px"}}>
+          <div style={{backgroundColor:"white",width:"400px"}}>
+          <Link to="/valid" style={{color:"black", marginRight:"20px"}}>
             + Create Poll
             </Link>
-            <Button onClick={showModal} style={{color:"black"}}>My Profile</Button>
-            <Modal
-        centered
-        title="Sign In!"
-        visible={visible}
-        onOk={handleOk}
-        onCancel={handlecancel}
-        >
-        
-        </Modal> 
+
+            <Button onClick={showModal} style={{color:"black",marginRight:"20px"}}>My Profile</Button>
+            <Button href='/polls' style={{color:"black"}}>All Polls</Button>
             </div>:""}
             { (localStorage.getItem('user'))!= null?
                     

@@ -1,8 +1,9 @@
 import React from "react";
-import { ArchiveFill } from "react-bootstrap-icons";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import { ArchiveFill } from "react-bootstrap-icons";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/arcane-logo.png"
+import tanas from "../assets/Tanas.jpg"
 // import './App.css'
 import "./MainPage.css";
 import { Button } from "@mui/material";
@@ -10,8 +11,7 @@ import { Button } from "@mui/material";
 const MainPage = () => {
   return (
     <>
-      <body></body>
-      
+      <div id="tanas">
           <div style={{marginTop:"3.5%"}}>
           <img  style={{marginLeft:"100px",marginBottom:"20px",width:"350px"}} src={logo}/>
             <h3  className="image-text">
@@ -24,6 +24,7 @@ const MainPage = () => {
              while providing a higher level of security and<br/> auditability.
             </h5>
           </div>
+          </div> 
     </>
   );
 };
