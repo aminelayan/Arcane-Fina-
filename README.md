@@ -42,7 +42,7 @@ To run this project, you will need to go to the root folder and Client Folder ea
 ## Screenshots
 
 # Welcome Page 
-![App Screenshot]//
+![App Screenshot](https://i.ibb.co/BrLDFw5/Main-Page.png)
 - This is the Welcome page for the Project.
 # Sign in 
 ![App Screenshot](https://i.ibb.co/9twQrC0/sign-in.png)
